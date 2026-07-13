@@ -476,3 +476,62 @@ blockquote p { margin: 0; font-family: var(--serif); font-size: 30px; line-heigh
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+.project-item--lecture {
+  align-items: flex-start;
+}
+
+.project-item--lecture .project-content {
+  width: 100%;
+  max-width: none;
+}
+
+.lecture-video {
+  position: relative;
+  width: 100%;
+  margin-top: 28px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border-radius: 18px;
+}
+
+.lecture-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.lecture-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.lecture-caption {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.65;
+}
+
+.project-action--lecture {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .lecture-video {
+    margin-top: 22px;
+    border-radius: 12px;
+  }
+
+  .lecture-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
